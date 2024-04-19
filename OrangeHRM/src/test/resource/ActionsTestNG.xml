@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<parameter name="URL" value="https://www.selenium.dev/selenium/web/mouse_interaction.html"></parameter>
+	<parameter name="YatraURL" value="https://www.yatra.com/"></parameter>
+	<test name="Test1">
+		<classes>
+			<class name="com.subhash.Basic.ActionsDemo1">
+				<methods>
+					<include name="moveToElement" />
+					<include name="verifyTitle" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Test2">
+		<classes>
+			<class name="com.subhash.Basic.ActionsDemo1">
+				<methods>
+					<include name="verifyCurrentURL" />
+					<include name="dargAndDropTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
